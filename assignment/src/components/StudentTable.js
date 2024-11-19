@@ -24,6 +24,7 @@ export default function StudentTable({stuDetails}) {
                         <th>First</th>
                         <th>Last</th>
                         <th>Course</th>
+                        <th>Country</th>
                         <th>Profile</th>
                     </tr>
                     {
@@ -34,6 +35,7 @@ export default function StudentTable({stuDetails}) {
                                     <td>{e.firstName}</td>
                                     <td>{e.lastName}</td>
                                     <td>{e.course}</td>
+                                    <td>{e.address.country}</td>
                                     <td><button onClick={() => {viewProfile(e.studentId)}}>View</button></td>
                                 </tr>       
                             )
