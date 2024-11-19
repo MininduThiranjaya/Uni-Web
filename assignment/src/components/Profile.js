@@ -1,5 +1,4 @@
 import React from "react";
-import location from '../assets/profilepic/1.jpg'
 import style from '../assets/css/compo.css';
 
 
@@ -10,7 +9,7 @@ export default function Profile({selected}) {
         <>
             <table border={1}>
                 <tr>
-                    <td rowSpan={7}>
+                    <td rowSpan={8}>
                         <img className='profile' src={require('../assets/profilepic/'+selected.profilePic)} alt="Profile Picture"/>
                     </td>
                 </tr>
@@ -33,7 +32,7 @@ export default function Profile({selected}) {
                     <td>Address : {selected.address.city}, {selected.address.country}</td>
                 </tr>
                 <tr>
-                    <td>Skills : {selected.skills}</td>
+                    <td>Skills : {selected.skills.map((e) => e += ', ')}</td>
                 </tr>
             </table>           
         </>
